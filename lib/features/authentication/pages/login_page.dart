@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:planova/features/authentication/widgets/auth_appbar.dart';
+import 'package:planova/features/authentication/widgets/custom_text_input_fields.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -16,6 +18,18 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           children: [
             CustomAuthAppbar(),
+            const SizedBox(height: 10),
+            // Sign In text
+            Text(
+              "Signin to your account",
+              style: TextStyle(
+                color: Colors.black87,
+                fontSize: 21,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            // Email and password input fields
+            CustomTextInputFields(),
           ],
         ),
       ),
