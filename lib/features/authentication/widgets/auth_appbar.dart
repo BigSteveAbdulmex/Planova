@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:planova/features/authentication/widgets/custom_curved_edge.dart';
 
 class CustomAuthAppbar extends StatelessWidget {
@@ -41,6 +43,20 @@ class CustomAuthAppbar extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(300),
                     color: Colors.white.withValues(alpha: 0.1),
+                  ),
+                ),
+              ),
+              // Add the "Planova" text on top of everything
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Planova",
+                    style: GoogleFonts.emblemaOne(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.normal,
+                    ),
                   ),
                 ),
               ),
