@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:planova/features/authentication/pages/login_page.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -27,9 +30,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   children: [
                     Text(
                       "Planova",
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w500,
+                      style: GoogleFonts.emblemaOne(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.normal,
                       ),
                     ),
                   ],
