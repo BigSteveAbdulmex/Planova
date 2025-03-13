@@ -33,17 +33,17 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                   maxWidth: MediaQuery.of(context).size.width,
                 ),
                 filled: true,
-                fillColor: Colors.grey[200],
+                fillColor: Colors.grey[100],
                 hintText: "Enter Your Email",
                 hintStyle: TextStyle(color: Colors.grey[400]),
                 prefixIcon: Icon(
                   Icons.email,
-                  color: Colors.deepPurple,
+                  color: Color(0xFF2E8B57),
                   size: 20,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.0),
-                  borderSide: BorderSide(color: Colors.grey, width: 1.0),
+                  borderSide: BorderSide(color: Color(0xFFC0C0C0), width: 1.0),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.0),
@@ -67,18 +67,18 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                   horizontal: 16.0,
                 ),
                 filled: true,
-                fillColor: Colors.grey[200],
+                fillColor: Colors.grey[100],
                 hintText: "Enter Your Password",
                 hintStyle: TextStyle(color: Colors.grey[400]),
                 prefixIcon: Icon(
                   Icons.lock,
-                  color: Colors.deepPurple,
+                  color: Color(0xFF2E8B57),
                   size: 20,
                 ),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                    color: Colors.deepPurple,
+                    color: Color(0xFF2E8B57),
                     size: 20,
                   ),
                   onPressed: () {
@@ -139,7 +139,7 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
+                  backgroundColor: Color(0xFF2E8B57),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),
                   ),
