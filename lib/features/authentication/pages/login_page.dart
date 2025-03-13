@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 10),
             // Sign In text
             Text(
-              "Signin to your account",
+              "Sign In to your account",
               style: TextStyle(
                 color: Colors.black87,
                 fontSize: 21,
