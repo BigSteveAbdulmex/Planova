@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +16,7 @@ class CustomAuthAppbar extends StatelessWidget {
     return ClipPath(
       clipper: CustomCurvedEdge(),
       child: Container(
-        color: Colors.deepPurple,
+        color: Colors.black,
         padding: EdgeInsets.all(0),
         child: SizedBox(
           height: 280,
@@ -29,7 +31,7 @@ class CustomAuthAppbar extends StatelessWidget {
                   padding: const EdgeInsets.all(0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(300),
-                    color: Colors.white.withValues(alpha: 0.1),
+                    color: Colors.orange,
                   ),
                 ),
               ),
@@ -42,7 +44,7 @@ class CustomAuthAppbar extends StatelessWidget {
                   padding: const EdgeInsets.all(0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(300),
-                    color: Colors.white.withValues(alpha: 0.1),
+                    color: Colors.deepPurple,
                   ),
                 ),
               ),
@@ -54,9 +56,17 @@ class CustomAuthAppbar extends StatelessWidget {
                     "Planova",
                     style: GoogleFonts.emblemaOne(
                       color: Colors.white,
-                      fontSize: 32,
+                      fontSize: 35,
                       fontWeight: FontWeight.normal,
                     ),
+                  ),
+                ),
+              ),
+              BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 100, sigmaY: 100),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
                   ),
                 ),
               ),
