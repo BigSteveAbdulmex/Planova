@@ -15,98 +15,103 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Column(
-        children: [
-          // Email Input Field
-          TextFormField(
-            controller: _emailController,
-            keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(
-              contentPadding:
-                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
-              constraints: BoxConstraints(
-                maxHeight: MediaQuery.of(context).size.height * 0.065,
-                maxWidth: MediaQuery.of(context).size.width,
-              ),
-              filled: true,
-              fillColor: Colors.grey[200],
-              hintText: "Enter Your Email",
-              hintStyle: TextStyle(color: Colors.grey[600]),
-              prefixIcon: Icon(Icons.email, color: Colors.green),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-                borderSide: BorderSide(color: Colors.yellow, width: 1.0),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-                borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-                borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        child: Column(
+          children: [
+            // Email Input Field
+            TextFormField(
+              controller: _emailController,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.symmetric(
+                    vertical: 12.0, horizontal: 16.0),
+                constraints: BoxConstraints(
+                  maxHeight: MediaQuery.of(context).size.height * 0.065,
+                  maxWidth: MediaQuery.of(context).size.width,
+                ),
+                filled: true,
+                fillColor: Colors.grey[200],
+                hintText: "Enter Your Email",
+                hintStyle: TextStyle(color: Colors.grey[600]),
+                prefixIcon: Icon(Icons.email, color: Colors.deepPurple),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  // borderSide: BorderSide(color: Colors.yellow, width: 1.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  // borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  // borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
+                ),
               ),
             ),
-          ),
-          const SizedBox(height: 15),
+            const SizedBox(height: 15),
 
-          // Password Input Field
-          TextFormField(
-            controller: _passwordController,
-            obscureText: _obscurePassword,
-            decoration: InputDecoration(
-              contentPadding:
-                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
-              filled: true,
-              fillColor: Colors.grey[200],
-              hintText: "Enter Your Password",
-              hintStyle: TextStyle(color: Colors.grey[600]),
-              prefixIcon: Icon(Icons.lock, color: Colors.green),
-              suffixIcon: IconButton(
-                icon: Icon(
-                  _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                  color: Colors.green,
+            // Password Input Field
+            TextFormField(
+              controller: _passwordController,
+              obscureText: _obscurePassword,
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.symmetric(
+                    vertical: 12.0, horizontal: 16.0),
+                filled: true,
+                fillColor: Colors.grey[200],
+                hintText: "Enter Your Password",
+                hintStyle: TextStyle(color: Colors.grey[600]),
+                prefixIcon: Icon(Icons.lock, color: Colors.deepPurple),
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                    color: Colors.deepPurple,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _obscurePassword = !_obscurePassword;
+                    });
+                  },
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  // borderSide: BorderSide(color: Colors.yellow, width: 1.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  // borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  // borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // Sign In Button
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
                 onPressed: () {
-                  setState(() {
-                    _obscurePassword = !_obscurePassword;
-                  });
+                  // Handle sign-in logic here
                 },
-              ),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-                borderSide: BorderSide(color: Colors.yellow, width: 1.0),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-                borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-                borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
-
-          // Sign In Button
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+                child: Text(
+                  "Sign In",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
-                padding: const EdgeInsets.symmetric(vertical: 16),
               ),
-              onPressed: () {
-                // Handle sign-in logic here
-              },
-              child: Text("Sign In",
-                  style: TextStyle(fontSize: 16, color: Colors.white)),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
