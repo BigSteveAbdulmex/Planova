@@ -17,7 +17,7 @@ class CustomAuthAppbar extends StatelessWidget {
         color: Colors.deepPurple,
         padding: EdgeInsets.all(0),
         child: SizedBox(
-          height: 300,
+          height: 280,
           child: Stack(
             children: [
               Positioned(
@@ -25,7 +25,7 @@ class CustomAuthAppbar extends StatelessWidget {
                 right: -250,
                 child: Container(
                   width: 400,
-                  height: 300,
+                  height: 280,
                   padding: const EdgeInsets.all(0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(300),
