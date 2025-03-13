@@ -151,6 +151,31 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 ),
               ),
             ),
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "Don't have an account? ",
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    // Navigate to sign up
+                  },
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.deepPurple,
+                    ), // Example color from the image
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
