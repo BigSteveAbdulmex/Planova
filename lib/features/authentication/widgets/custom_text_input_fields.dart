@@ -36,7 +36,11 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 fillColor: Colors.grey[200],
                 hintText: "Enter Your Email",
                 hintStyle: TextStyle(color: Colors.grey[400]),
-                prefixIcon: Icon(Icons.email, color: Colors.deepPurple),
+                prefixIcon: Icon(
+                  Icons.email,
+                  color: Colors.deepPurple,
+                  size: 20,
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.0),
                   borderSide: BorderSide(color: Colors.grey, width: 1.0),
@@ -66,11 +70,16 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 fillColor: Colors.grey[200],
                 hintText: "Enter Your Password",
                 hintStyle: TextStyle(color: Colors.grey[400]),
-                prefixIcon: Icon(Icons.lock, color: Colors.deepPurple),
+                prefixIcon: Icon(
+                  Icons.lock,
+                  color: Colors.deepPurple,
+                  size: 20,
+                ),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _obscurePassword ? Icons.visibility_off : Icons.visibility,
                     color: Colors.deepPurple,
+                    size: 20,
                   ),
                   onPressed: () {
                     setState(() {
@@ -92,8 +101,36 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 ),
               ),
             ),
-            const SizedBox(height: 25),
 
+            const SizedBox(height: 8),
+            // Remember me and Forgot Password Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Checkbox(
+                      value: true, // Replace with your logic
+                      onChanged: (bool? value) {
+                        // Handle checkbox change
+                      },
+                      shape: CircleBorder(),
+                    ),
+                    Text("Remember me"),
+                  ],
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Handle forgot password logic
+                  },
+                  child: Text(
+                    "Forgot password?",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
             // Sign In Button
             SizedBox(
               width: double.infinity,
