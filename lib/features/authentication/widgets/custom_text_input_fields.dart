@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 class CustomTextInputFields extends StatefulWidget {
   const CustomTextInputFields({super.key});
 
@@ -166,30 +164,41 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 _buildSocialButton(
-                  icon: Image.asset('assets/google_logo.png', height: 30),
+                  icon: Image.asset(
+                    'assets/logo-imgs/google_logo.png',
+                    height: 30,
+                  ),
                   onPressed: () {
                     // Handle Google sign in
                   },
                 ),
                 const SizedBox(width: 15),
                 _buildSocialButton(
-                  icon: Icon(FontAwesomeIcons.facebook,
-                      color: Colors.blue, size: 30),
+                  icon: Image.asset(
+                    'assets/logo-imgs/icons8-apple-logo-100.png',
+                    height: 30,
+                  ),
                   onPressed: () {
                     // Handle Facebook sign in
                   },
                 ),
-                const SizedBox(width: 15),
-                _buildSocialButton(
-                  icon: Icon(Icons.chat_bubble_outline,
-                      color: Colors.grey, size: 30),
-                  onPressed: () {
-                    // Handle chat sign in
-                  },
-                ),
+                // const SizedBox(width: 15),
+                // _buildSocialButton(
+                //   icon: Icon(Icons.chat_bubble_outline,
+                //       color: Colors.grey, size: 30),
+                //   onPressed: () {
+                //     // Handle chat sign in
+                //   },
+                // ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 15),
+            // Light Gray Divider
+            Divider(
+              color: Colors.grey[400],
+              thickness: 1.0,
+            ),
+            const SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
