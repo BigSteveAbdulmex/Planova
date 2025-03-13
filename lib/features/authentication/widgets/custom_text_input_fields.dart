@@ -16,7 +16,7 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        padding: const EdgeInsets.fromLTRB(12, 20, 12, 0),
         child: Column(
           children: [
             // Email Input Field
@@ -25,7 +25,9 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(
-                    vertical: 12.0, horizontal: 16.0),
+                  vertical: 12.0,
+                  horizontal: 16.0,
+                ),
                 constraints: BoxConstraints(
                   maxHeight: MediaQuery.of(context).size.height * 0.065,
                   maxWidth: MediaQuery.of(context).size.width,
@@ -33,23 +35,23 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 filled: true,
                 fillColor: Colors.grey[200],
                 hintText: "Enter Your Email",
-                hintStyle: TextStyle(color: Colors.grey[600]),
+                hintStyle: TextStyle(color: Colors.grey[400]),
                 prefixIcon: Icon(Icons.email, color: Colors.deepPurple),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                  // borderSide: BorderSide(color: Colors.yellow, width: 1.0),
+                  borderRadius: BorderRadius.circular(12.0),
+                  borderSide: BorderSide(color: Colors.grey, width: 1.0),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(12.0),
                   // borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(12.0),
                   // borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
                 ),
               ),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 20),
 
             // Password Input Field
             TextFormField(
@@ -57,11 +59,13 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
               obscureText: _obscurePassword,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(
-                    vertical: 12.0, horizontal: 16.0),
+                  vertical: 12.0,
+                  horizontal: 16.0,
+                ),
                 filled: true,
                 fillColor: Colors.grey[200],
                 hintText: "Enter Your Password",
-                hintStyle: TextStyle(color: Colors.grey[600]),
+                hintStyle: TextStyle(color: Colors.grey[400]),
                 prefixIcon: Icon(Icons.lock, color: Colors.deepPurple),
                 suffixIcon: IconButton(
                   icon: Icon(
@@ -75,20 +79,20 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                   },
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(12.0),
                   // borderSide: BorderSide(color: Colors.yellow, width: 1.0),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(12.0),
                   // borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(12.0),
                   // borderSide: BorderSide(color: Colors.yellowAccent, width: 1.0),
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
 
             // Sign In Button
             SizedBox(
@@ -97,7 +101,7 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.deepPurple,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
