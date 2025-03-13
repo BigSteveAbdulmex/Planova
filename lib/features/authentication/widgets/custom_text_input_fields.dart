@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 class CustomTextInputFields extends StatefulWidget {
   const CustomTextInputFields({super.key});
 
@@ -125,7 +127,10 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                   },
                   child: Text(
                     "Forgot password?",
-                    style: TextStyle(fontSize: 14),
+                    style: TextStyle(
+                      fontSize: 14.5,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ],
@@ -151,7 +156,40 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 20),
+            Text(
+              'Or sign in with',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 15),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                _buildSocialButton(
+                  icon: Image.asset('assets/google_logo.png', height: 30),
+                  onPressed: () {
+                    // Handle Google sign in
+                  },
+                ),
+                const SizedBox(width: 15),
+                _buildSocialButton(
+                  icon: Icon(FontAwesomeIcons.facebook,
+                      color: Colors.blue, size: 30),
+                  onPressed: () {
+                    // Handle Facebook sign in
+                  },
+                ),
+                const SizedBox(width: 15),
+                _buildSocialButton(
+                  icon: Icon(Icons.chat_bubble_outline,
+                      color: Colors.grey, size: 30),
+                  onPressed: () {
+                    // Handle chat sign in
+                  },
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -171,7 +209,7 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                       fontSize: 17,
                       fontWeight: FontWeight.w600,
                       color: Colors.deepPurple,
-                    ), // Example color from the image
+                    ),
                   ),
                 ),
               ],
@@ -179,6 +217,21 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildSocialButton(
+      {required Widget icon, required VoidCallback onPressed}) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        padding: EdgeInsets.all(10),
+        iconColor: Colors.white,
+      ),
+      child: icon,
     );
   }
 }
