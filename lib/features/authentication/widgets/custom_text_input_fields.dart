@@ -8,7 +8,7 @@ class CustomTextInputFields extends StatefulWidget {
 }
 
 class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
-  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _obscurePassword = true;
 
@@ -21,7 +21,7 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
           children: [
             // Email Input Field
             TextFormField(
-              controller: _emailController,
+              controller: emailController,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(
@@ -38,7 +38,7 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 hintStyle: TextStyle(color: Colors.grey[400]),
                 prefixIcon: Icon(
                   Icons.email,
-                  color: Color(0xFF2E8B57),
+                  color: Colors.deepPurple,
                   size: 20,
                 ),
                 border: OutlineInputBorder(
@@ -72,13 +72,13 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
                 hintStyle: TextStyle(color: Colors.grey[400]),
                 prefixIcon: Icon(
                   Icons.lock,
-                  color: Color(0xFF2E8B57),
+                  color: Colors.deepPurple,
                   size: 20,
                 ),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                    color: Color(0xFF2E8B57),
+                    color: Colors.deepPurple,
                     size: 20,
                   ),
                   onPressed: () {
@@ -139,7 +139,7 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF2E8B57),
+                  backgroundColor: Colors.deepPurple,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),
                   ),
