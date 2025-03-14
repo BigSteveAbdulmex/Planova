@@ -14,7 +14,7 @@ class CustomAuthAppbar extends StatelessWidget {
     return ClipPath(
       clipper: CustomCurvedEdge(),
       child: Container(
-        color: Colors.black,
+        color: Colors.deepPurple,
         padding: EdgeInsets.all(0),
         child: SizedBox(
           height: 280,
@@ -29,7 +29,7 @@ class CustomAuthAppbar extends StatelessWidget {
                   padding: const EdgeInsets.all(0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(300),
-                    color: Colors.orange,
+                    color: Colors.white.withValues(alpha: 0.2),
                   ),
                 ),
               ),
@@ -42,7 +42,7 @@ class CustomAuthAppbar extends StatelessWidget {
                   padding: const EdgeInsets.all(0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(300),
-                    color: Colors.deepPurple,
+                    color: Colors.white.withValues(alpha: 0.2),
                   ),
                 ),
               ),
