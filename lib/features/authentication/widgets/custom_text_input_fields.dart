@@ -195,7 +195,7 @@ class _CustomTextInputFieldsState extends State<CustomTextInputFields> {
             const SizedBox(height: 15),
             // Light Gray Divider
             Divider(
-              color: Colors.grey[400],
+              color: Colors.grey[300],
               thickness: 1.0,
             ),
             const SizedBox(height: 15),
