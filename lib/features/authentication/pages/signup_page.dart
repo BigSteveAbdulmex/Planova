@@ -10,7 +10,9 @@ class SignupPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // Custom app bar
             CustomAuthAppbar(),
+            // Intro text
             Text(
               "Create an account",
               style: TextStyle(
@@ -19,6 +21,7 @@ class SignupPage extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
+            // Email and passwod Input fields
           ],
         ),
       ),
