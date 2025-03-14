@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -59,14 +57,6 @@ class CustomAuthAppbar extends StatelessWidget {
                       fontSize: 35,
                       fontWeight: FontWeight.normal,
                     ),
-                  ),
-                ),
-              ),
-              BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 100, sigmaY: 100),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.transparent,
                   ),
                 ),
               ),
